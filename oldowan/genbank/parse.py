@@ -56,7 +56,7 @@ def parse_genbank(entry, include=INCLUDE):
     if 'features' in include:
         fea_mo = RE_FEATURE.search(entry)
         if fea_mo:
-            hash['features'] = extract_features(fea_mo.group(0))
+            hash['features'] = extract_features(fea_mo.group(1))
     elif 'source_feature_only' in include:
         fea_mo = RE_FEATURE.search(entry)
         if fea_mo:
